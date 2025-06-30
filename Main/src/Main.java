@@ -31,5 +31,36 @@ public class Main {
                            "\n3. Multiplication" +
                            "\n4. Division");
         int choice = input.nextInt();
+
+        switch (choice) {
+            case 1:
+                System.out.println("Enter two numbers for addition:");
+                int add1 = input.nextInt();
+                int add2 = input.nextInt();
+                System.out.println("Result: " + Addition(add1, add2));
+                break;
+            case 2:
+                System.out.println("Enter two numbers for subtraction:");
+                int sub1 = input.nextInt();
+                int sub2 = input.nextInt();
+                System.out.println("Result: " + Subtraction(sub1, sub2));
+                break;
+            case 3:
+                System.out.println("Enter two numbers for multiplication:");
+                int mul1 = input.nextInt();
+                int mul2 = input.nextInt();
+                System.out.println("Result: " + Multiplication(mul1, mul2));
+                break;
+            case 4:
+                System.out.println("Enter two numbers for division:");
+                int div1 = input.nextInt();
+                int div2 = input.nextInt();
+                try {
+                    System.out.println("Result: " + Division(div1, div2));
+                } catch (ArithmeticException e) {
+                    System.out.println(e.getMessage());
+                }
+                break;
+        }
     }
 }
