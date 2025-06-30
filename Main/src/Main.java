@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class Main {
-    Scanner input = new Scanner(System.in);
+    static Scanner input = new Scanner(System.in);
     /*=====================================*/
     //  FUNCTION TO ADD TWO NUMBERS //
     static int Addition(int a, int b) {
@@ -21,8 +21,15 @@ public class Main {
         }
         return a / b;
     }
+
     //  ENTRY POINT OF THE PROGRAM //
     public static void main(String[] args) {
-
+        System.out.println("Welcome to the Simple Calculator!" +
+                            "\nChoose an operation:" +
+                           "\n1. Addition" +
+                           "\n2. Subtraction" +
+                           "\n3. Multiplication" +
+                           "\n4. Division");
+        int choice = input.nextInt();
     }
 }
