@@ -36,6 +36,7 @@ public class Main {
                 3. Multiplication\
                 
                 4. Division""");
+        System.out.print("Enter your choice (1-4): ");
         int choice = input.nextInt();
 
         switch (choice) {
