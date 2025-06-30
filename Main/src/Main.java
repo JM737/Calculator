@@ -24,12 +24,18 @@ public class Main {
 
     //  ENTRY POINT OF THE PROGRAM //
     public static void main(String[] args) {
-        System.out.println("Welcome to the Simple Calculator!" +
-                            "\nChoose an operation:" +
-                           "\n1. Addition" +
-                           "\n2. Subtraction" +
-                           "\n3. Multiplication" +
-                           "\n4. Division");
+        System.out.println("""
+                Welcome to the Simple Calculator!\
+                
+                Choose an operation:\
+                
+                1. Addition\
+                
+                2. Subtraction\
+                
+                3. Multiplication\
+                
+                4. Division""");
         int choice = input.nextInt();
 
         switch (choice) {
