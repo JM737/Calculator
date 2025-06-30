@@ -8,5 +8,4 @@ public class Main {
     //  ENTRY POINT OF THE PROGRAM //
     public static void main (String [] args) {
 
-    }
 }
