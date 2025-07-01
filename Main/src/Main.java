@@ -34,9 +34,11 @@ public class Main {
                 
                 3. Multiplication\
                 
-                4. Division""");
+                4. Division\
+                
+                5. Exit""");
 
-        System.out.print("Enter your choice (1-4): ");
+        System.out.print("Enter your choice (1-5): ");
     }
     static void exitQuestion() {
         System.out.println("Do you want to exit? (yes/no)");
@@ -95,6 +97,9 @@ public class Main {
                         System.out.println(e.getMessage());
                     }
                     exitQuestion();
+                    break;
+                case 5:
+                    exit(); // Call exit function to terminate the program
                     break;
             }
         } while (exit); // Loop indefinitely to allow multiple calculations
