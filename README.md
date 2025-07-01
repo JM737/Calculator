@@ -10,8 +10,9 @@ A simple Java-based calculator application designed to compute numbers efficient
 - ➖ Subtraction  
 - ✖️ Multiplication  
 - ➗ Division  
-- ✅ Clean and simple interface  
+- 🖥️ Console-based interface (no GUI)
 - ⚙️ Built with core Java (no external libraries)
+  
 
 ---
 
