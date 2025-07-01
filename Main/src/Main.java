@@ -6,16 +6,31 @@ public class Main {
     static int Addition(int a, int b) {
         return a + b;
     }
+    static double Addition(double a, double b) {
+        return a + b;
+    }
     //  FUNCTION TO SUBTRACT TWO NUMBERS //
     static int Subtraction(int a, int b) {
         return a - b;
+    }
+    static double Subtraction(double a, double b) {
+        return  a - b;
     }
     //  FUNCTION TO MULTIPLY TWO NUMBERS //
     static int Multiplication(int a, int b) {
         return a * b;
     }
+    static double Multiplication(double a, double b) {
+        return a * b;
+    }
     //  FUNCTION TO DIVIDE TWO NUMBERS //
     static int Division(int a, int b) {
+        if (b == 0) {
+            throw new ArithmeticException("Division by zero is not allowed.");
+        }
+        return a / b;
+    }
+    static  double Division(double a, double b) {
         if (b == 0) {
             throw new ArithmeticException("Division by zero is not allowed.");
         }
@@ -36,6 +51,7 @@ public class Main {
                 3. Multiplication\
                 
                 4. Division""");
+
         System.out.print("Enter your choice (1-4): ");
         int choice = input.nextInt();
 
