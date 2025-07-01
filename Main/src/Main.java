@@ -36,10 +36,8 @@ public class Main {
         }
         return a / b;
     }
-
-    //  ENTRY POINT OF THE PROGRAM //
-    public static void main(String[] args) {
-        System.out.println("""
+    /* QUESTION FUNCTION */
+    static void question () { System.out.println("""
                 Welcome to the Simple Calculator!\
                 
                 Choose an operation:\
@@ -53,6 +51,12 @@ public class Main {
                 4. Division""");
 
         System.out.print("Enter your choice (1-4): ");
+    }
+
+    /* ENTRY POINT OF THE PROGRAM */
+    public static void main (String[] args) {
+
+        question();
         int choice = input.nextInt();
 
         switch (choice) {
