@@ -53,7 +53,7 @@ public class Main {
     static void exit() {
         System.out.println("Exiting the calculator. Goodbye!");
         input.close();
-        exit = false; // Set exit to false to stop the loop
+        exit = false; // Set exit too false to stop the loop
     }
 
     /* ENTRY POINT OF THE PROGRAM */
