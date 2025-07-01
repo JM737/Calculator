@@ -3,6 +3,7 @@ public class Main {
     static Scanner input = new Scanner(System.in);
     static boolean exit = true;
     /*=====================================*/
+
     //  FUNCTION TO ADD TWO NUMBERS //
     static double Addition(double a, double b) {
         return a + b;
@@ -22,10 +23,54 @@ public class Main {
         }
         return a / b;
     }
+    /* SWITCH CASE FUNCTION */
+    static void switchCase(int switchChoice) {
+        switch (switchChoice) {
+            case 1:
+                System.out.println("|| Addition selected. ||");
+                System.out.print("Enter first number: ");
+                double addNum1 = input.nextDouble();
+                System.out.print("Enter second number: ");
+                double addNum2 = input.nextDouble();
+                System.out.println("Result: " + Addition(addNum1, addNum2));
+                exitQuestion();
+                break;
+            case 2:
+                System.out.println("|| Subtraction selected. ||");
+                System.out.print("Enter first number: ");
+                double subNum1 = input.nextDouble();
+                System.out.print("Enter second number: ");
+                double subNum2 = input.nextDouble();
+                System.out.println("Result: " + Subtraction(subNum1, subNum2));
+                exitQuestion();
+                break;
+            case 3:
+                System.out.println("|| Multiplication selected. ||");
+                System.out.print("Enter first number: ");
+                double prodNum1 = input.nextDouble();
+                System.out.print("Enter second number: ");
+                double prodNum2 = input.nextDouble();
+                System.out.println("Result: " + Multiplication(prodNum1, prodNum2));
+                exitQuestion();
+                break;
+            case 4:
+                System.out.println("|| Division selected. ||");
+                System.out.print("Enter first number: ");
+                double divNum1 = input.nextDouble();
+                System.out.print("Enter second number: ");
+                double divNum2 = input.nextDouble();
+                System.out.println("Result: " + Division(divNum1, divNum2));
+                exitQuestion();
+                break;
+            case 5:
+                exit();
+                break;
+            default:
+                System.out.println("Invalid choice. Please try again.");
+        }
+    }
     /* QUESTION FUNCTION */
     static void question () { System.out.println("""
-                Welcome to the Simple Calculator!\
-                
                 Choose an operation:\
                 
                 1. Addition\
@@ -43,6 +88,7 @@ public class Main {
     static void exitQuestion() {
         System.out.println("Do you want to exit? (yes/no)");
         String response = input.next();
+        System.out.println();
         if (response.equalsIgnoreCase("yes")) {
             exit();
         } else {
@@ -58,50 +104,11 @@ public class Main {
 
     /* ENTRY POINT OF THE PROGRAM */
     public static void main (String[] args) {
-
-
-
+        System.out.println("Welcome to the Calculator!");
         do {
             question();
             int choice = input.nextInt();
-
-            switch (choice) {
-                case 1:
-                    System.out.println("Enter two numbers for addition:");
-                    double add1 = input.nextDouble();
-                    double add2 = input.nextDouble();
-                    System.out.println("Result: " + Addition(add1, add2));
-                    exitQuestion(); // Ask if the user wants to exit after addition
-                    break;
-                case 2:
-                    System.out.println("Enter two numbers for subtraction:");
-                    double sub1 = input.nextDouble();
-                    double sub2 = input.nextDouble();
-                    System.out.println("Result: " + Subtraction(sub1, sub2));
-                    exitQuestion();
-                    break;
-                case 3:
-                    System.out.println("Enter two numbers for multiplication:");
-                    double mul1 = input.nextDouble();
-                    double mul2 = input.nextDouble();
-                    System.out.println("Result: " + Multiplication(mul1, mul2));
-                    exitQuestion();
-                    break;
-                case 4:
-                    System.out.println("Enter two numbers for division:");
-                    double div1 = input.nextDouble();
-                    double div2 = input.nextDouble();
-                    try {
-                        System.out.println("Result: " + Division(div1, div2));
-                    } catch (ArithmeticException e) {
-                        System.out.println(e.getMessage());
-                    }
-                    exitQuestion();
-                    break;
-                case 5:
-                    exit(); // Call exit function to terminate the program
-                    break;
-            }
+            switchCase(choice);
         } while (exit); // Loop indefinitely to allow multiple calculations
     }
 }
