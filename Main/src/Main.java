@@ -91,8 +91,21 @@ public class Main {
                 double prodNum2 = input.nextDouble();
                 double prodResult = Multiplication(prodNum1, prodNum2);
                 System.out.println("Result: " + prodResult);
+
+                while (true) {
+                    System.out.print("Do you want to multiply another number with the current result? (yes/no): ");
+                    String more = input.next();
+                    if (!more.equalsIgnoreCase("yes")) {
+                        break;
+                    }
+                    System.out.print("Enter another number: ");
+                    double prodNumNext = input.nextDouble();
+                    prodResult *= prodNumNext;
+                    System.out.println("Updated Result: " + prodResult);
+                }
                 exitQuestion();
                 break;
+
             case 4:
                 System.out.println("[Division selected]");
                 System.out.print("Enter first number: ");
