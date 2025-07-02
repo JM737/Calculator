@@ -24,7 +24,7 @@ public class Main {
         return a / b;
     }
     static void exitQuestion() {
-        System.out.println("Do you want to exit? (yes/no)");
+        System.out.print("Do you want to exit? (yes/no): ");
         String response = input.next();
         System.out.println();
         if (response.equalsIgnoreCase("yes")) {
@@ -45,11 +45,11 @@ public class Main {
                 double addNum2 = input.nextDouble();
                 double addResult = Addition(addNum1, addNum2);
                 System.out.println("Result: " + addResult);
-
-                while (true) {
+                while (exit) {
                     System.out.print("Do you want to add another number to the current result? (yes/no): ");
                     String more = input.next();
                     if (!more.equalsIgnoreCase("yes")) {
+                        exit = false;
                         break;
                     }
                     System.out.print("Enter another number: ");
@@ -130,6 +130,7 @@ public class Main {
                 break;
             case 5:
                 System.out.println("Thank you for using the Calculator!");
+                exit = false; // Exit the loop
                 break;
             default:
                 System.out.println("Invalid choice. Please try again.");
