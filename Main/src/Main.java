@@ -43,8 +43,17 @@ public class Main {
                 double addNum1 = input.nextDouble();
                 System.out.print("Enter second number: ");
                 double addNum2 = input.nextDouble();
-                System.out.println("Result: " + Addition(addNum1, addNum2));
+                double addResult = Addition(addNum1, addNum2);
+                System.out.println("Result: " + addResult);
                 question();
+                int choice = input.nextInt();
+                if (choice == 1) {
+                    System.out.println("Current result: " + addResult);
+                    System.out.print("Enter another number: ");
+                    double addNum3 = input.nextDouble();
+                    addResult = addResult + addNum3;
+                    System.out.println("Updated Result: " + addResult);
+                }
                 exitQuestion();
                 break;
             case 2:
@@ -53,7 +62,8 @@ public class Main {
                 double subNum1 = input.nextDouble();
                 System.out.print("Enter second number: ");
                 double subNum2 = input.nextDouble();
-                System.out.println("Result: " + Subtraction(subNum1, subNum2));
+                double subResult = Subtraction(subNum1, subNum2);
+                System.out.println("Result: " + subResult);
                 exitQuestion();
                 break;
             case 3:
@@ -62,7 +72,8 @@ public class Main {
                 double prodNum1 = input.nextDouble();
                 System.out.print("Enter second number: ");
                 double prodNum2 = input.nextDouble();
-                System.out.println("Result: " + Multiplication(prodNum1, prodNum2));
+                double prodResult = Multiplication(prodNum1, prodNum2);
+                System.out.println("Result: " + prodResult);
                 exitQuestion();
                 break;
             case 4:
@@ -71,7 +82,8 @@ public class Main {
                 double divNum1 = input.nextDouble();
                 System.out.print("Enter second number: ");
                 double divNum2 = input.nextDouble();
-                System.out.println("Result: " + Division(divNum1, divNum2));
+                double divResult = Division(divNum1, divNum2);
+                System.out.println("Result: " + divResult);
                 exitQuestion();
                 break;
             case 5:
