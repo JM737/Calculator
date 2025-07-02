@@ -23,20 +23,32 @@ public class Main {
         }
         return a / b;
     }
+    static void exitQuestion() {
+        System.out.println("Do you want to exit? (yes/no)");
+        String response = input.next();
+        System.out.println();
+        if (response.equalsIgnoreCase("yes")) {
+            System.out.println("Thank you for using the Calculator!");
+            exit = false; // Exit the loop
+        } else {
+            exit = true; // Continue the loop
+        }
+    }
     /* SWITCH CASE FUNCTION */
     static void switchCase(int switchChoice) {
         switch (switchChoice) {
             case 1:
-                System.out.println("|| Addition selected. ||");
+                System.out.println("[Addition selected]");
                 System.out.print("Enter first number: ");
                 double addNum1 = input.nextDouble();
                 System.out.print("Enter second number: ");
                 double addNum2 = input.nextDouble();
                 System.out.println("Result: " + Addition(addNum1, addNum2));
+                question();
                 exitQuestion();
                 break;
             case 2:
-                System.out.println("|| Subtraction selected. ||");
+                System.out.println("[Subtraction selected]");
                 System.out.print("Enter first number: ");
                 double subNum1 = input.nextDouble();
                 System.out.print("Enter second number: ");
@@ -45,7 +57,7 @@ public class Main {
                 exitQuestion();
                 break;
             case 3:
-                System.out.println("|| Multiplication selected. ||");
+                System.out.println("[Multiplication selected]");
                 System.out.print("Enter first number: ");
                 double prodNum1 = input.nextDouble();
                 System.out.print("Enter second number: ");
@@ -54,7 +66,7 @@ public class Main {
                 exitQuestion();
                 break;
             case 4:
-                System.out.println("|| Division selected. ||");
+                System.out.println("[Division selected]");
                 System.out.print("Enter first number: ");
                 double divNum1 = input.nextDouble();
                 System.out.print("Enter second number: ");
@@ -63,12 +75,13 @@ public class Main {
                 exitQuestion();
                 break;
             case 5:
-                exit();
+                System.out.println("Thank you for using the Calculator!");
                 break;
             default:
                 System.out.println("Invalid choice. Please try again.");
         }
     }
+
     /* QUESTION FUNCTION */
     static void question () { System.out.println("""
                 Choose an operation:\
@@ -84,22 +97,6 @@ public class Main {
                 5. Exit""");
 
         System.out.print("Enter your choice (1-5): ");
-    }
-    static void exitQuestion() {
-        System.out.println("Do you want to exit? (yes/no)");
-        String response = input.next();
-        System.out.println();
-        if (response.equalsIgnoreCase("yes")) {
-            exit();
-        } else {
-            exit = true; // Continue the loop
-        }
-    }
-    /* EXIT FUNCTION */
-    static void exit() {
-        System.out.println("Exiting the calculator. Goodbye!");
-        input.close();
-        exit = false; // Set exit too false to stop the loop
     }
 
     /* ENTRY POINT OF THE PROGRAM */
