@@ -57,9 +57,9 @@ public class Main {
                     addResult += addNumNext;
                     System.out.println("Updated Result: " + addResult);
                 }
-
                 exitQuestion();
                 break;
+
             case 2:
                 System.out.println("[Subtraction selected]");
                 System.out.print("Enter first number: ");
@@ -68,8 +68,21 @@ public class Main {
                 double subNum2 = input.nextDouble();
                 double subResult = Subtraction(subNum1, subNum2);
                 System.out.println("Result: " + subResult);
+
+                while (true) {
+                    System.out.print("Do you want to subtract another number from the current result? (yes/no): ");
+                    String more = input.next();
+                    if (!more.equalsIgnoreCase("yes")) {
+                        break;
+                    }
+                    System.out.print("Enter another number: ");
+                    double subNumNext = input.nextDouble();
+                    subResult -= subNumNext;
+                    System.out.println("Updated Result: " + subResult);
+                }
                 exitQuestion();
                 break;
+
             case 3:
                 System.out.println("[Multiplication selected]");
                 System.out.print("Enter first number: ");
