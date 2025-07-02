@@ -114,6 +114,18 @@ public class Main {
                 double divNum2 = input.nextDouble();
                 double divResult = Division(divNum1, divNum2);
                 System.out.println("Result: " + divResult);
+
+                while (true) {
+                    System.out.print("Do you want to divide the current result by another number? (yes/no): ");
+                    String more = input.next();
+                    if (!more.equalsIgnoreCase("yes")) {
+                        break;
+                    }
+                    System.out.print("Enter another number: ");
+                    double divNumNext = input.nextDouble();
+                    divResult = Division(divResult, divNumNext);
+                    System.out.println("Updated Result: " + divResult);
+                }
                 exitQuestion();
                 break;
             case 5:
