@@ -49,7 +49,6 @@ public class Main {
                     System.out.print("Do you want to add another number to the current result? (yes/no): ");
                     String more = input.next();
                     if (!more.equalsIgnoreCase("yes")) {
-                        exit = false;
                         break;
                     }
                     System.out.print("Enter another number: ");
