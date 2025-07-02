@@ -45,15 +45,19 @@ public class Main {
                 double addNum2 = input.nextDouble();
                 double addResult = Addition(addNum1, addNum2);
                 System.out.println("Result: " + addResult);
-                question();
-                int choice = input.nextInt();
-                if (choice == 1) {
-                    System.out.println("Current result: " + addResult);
+
+                while (true) {
+                    System.out.print("Do you want to add another number to the current result? (yes/no): ");
+                    String more = input.next();
+                    if (!more.equalsIgnoreCase("yes")) {
+                        break;
+                    }
                     System.out.print("Enter another number: ");
-                    double addNum3 = input.nextDouble();
-                    addResult = addResult + addNum3;
+                    double addNumNext = input.nextDouble();
+                    addResult += addNumNext;
                     System.out.println("Updated Result: " + addResult);
                 }
+
                 exitQuestion();
                 break;
             case 2:
