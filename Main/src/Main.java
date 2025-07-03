@@ -45,7 +45,7 @@ public class Main {
                 double addNum2 = input.nextDouble();
                 double addResult = Addition(addNum1, addNum2);
                 System.out.println("Result: " + addResult);
-                while (exit) {
+                while (true) {
                     System.out.print("Do you want to add another number to the current result? (yes/no): ");
                     String more = input.next();
                     if (!more.equalsIgnoreCase("yes")) {
@@ -158,6 +158,13 @@ public class Main {
         System.out.println("Welcome to the Calculator!");
         do {
             question();
+            /*try {
+                String input = "a";
+                int num = Integer.parseInt(input);
+                System.out.println(num);
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid number format!");
+            }*/
             int choice = input.nextInt();
             switchCase(choice);
         } while (exit); // Loop indefinitely to allow multiple calculations
