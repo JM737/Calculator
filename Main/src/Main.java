@@ -35,9 +35,9 @@ public class Main {
         }
     }
     /* SWITCH CASE FUNCTION */
-    static void switchCase(int switchChoice) {
+    static void switchCase(String switchChoice) {
         switch (switchChoice) {
-            case 1:
+            case  "1":
                 System.out.println("[Addition selected]");
                 System.out.print("Enter first number: ");
                 double addNum1 = input.nextDouble();
@@ -59,7 +59,7 @@ public class Main {
                 exitQuestion();
                 break;
 
-            case 2:
+            case "2":
                 System.out.println("[Subtraction selected]");
                 System.out.print("Enter first number: ");
                 double subNum1 = input.nextDouble();
@@ -82,7 +82,7 @@ public class Main {
                 exitQuestion();
                 break;
 
-            case 3:
+            case "3":
                 System.out.println("[Multiplication selected]");
                 System.out.print("Enter first number: ");
                 double prodNum1 = input.nextDouble();
@@ -105,7 +105,7 @@ public class Main {
                 exitQuestion();
                 break;
 
-            case 4:
+            case "4":
                 System.out.println("[Division selected]");
                 System.out.print("Enter first number: ");
                 double divNum1 = input.nextDouble();
@@ -127,12 +127,13 @@ public class Main {
                 }
                 exitQuestion();
                 break;
-            case 5:
+            case "5":
                 System.out.println("Thank you for using the Calculator!");
                 exit = false; // Exit the loop
                 break;
             default:
                 System.out.println("Invalid choice. Please try again.");
+                System.out.println();
         }
     }
 
@@ -158,16 +159,7 @@ public class Main {
         System.out.println("Welcome to the Calculator!");
         do {
             question();
-            try {
-                String input = "";
-                int choice = Integer.parseInt(input);
-                System.out.println(choice);
-            } catch (Exception e) {
-                System.out.println("Invalid input. Please enter a number.");
-                input.next(); // Clear the invalid input=
-                continue; // Skip to the next iteration
-            }
-            int choice = input.nextInt();
+            String choice = input.next();
             switchCase(choice);
         } while (exit); // Loop indefinitely to allow multiple calculations
     }
