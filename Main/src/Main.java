@@ -36,6 +36,7 @@ public class Main {
     }
     /* SWITCH CASE FUNCTION */
     //NEED TO CATCH ALL THE INVALID INPUT//
+    // NEED TO ADD A FUNCTION TO CHECK IF THE INPUT IS A NUMBER OR NOT //
     static void switchCase(String switchChoice) {
         switch (switchChoice) {
             case  "1":
