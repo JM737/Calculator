@@ -101,10 +101,11 @@ public class Main {
                     if (!more.equalsIgnoreCase("yes")) {
                         break;
                     }
+                    System.out.println("Current Result: " + prodResult);
                     System.out.print("Enter another number: ");
                     double prodNumNext = input.nextDouble();
                     prodResult *= prodNumNext;
-                    System.out.println("Updated Result: " + prodResult);
+                    System.out.println(prodResult + " x " + prodNumNext + " = " + prodResult);
                 }
                 exitQuestion();
                 break;
