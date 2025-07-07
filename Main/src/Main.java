@@ -77,10 +77,11 @@ public class Main {
                     if (!more.equalsIgnoreCase("yes")) {
                         break;
                     }
+                    System.out.println("Current Result: " + subResult);
                     System.out.print("Enter another number: ");
                     double subNumNext = input.nextDouble();
                     subResult -= subNumNext;
-                    System.out.println("Updated Result: " + subResult);
+                    System.out.println(subResult + " - " + subNumNext + " = "  + subResult);
                 }
                 exitQuestion();
                 break;
