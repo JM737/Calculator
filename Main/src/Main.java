@@ -40,35 +40,36 @@ public class Main {
     static void switchCase(String switchChoice) {
         switch (switchChoice) {
             case  "1":
-                System.out.println("[Addition selected]");
+                System.out.println("[ Addition selected ]");
                 System.out.print("Enter first number: ");
                 double addNum1 = input.nextDouble();
                 System.out.print("Enter second number: ");
                 double addNum2 = input.nextDouble();
                 double addResult = Addition(addNum1, addNum2);
-                System.out.println("Result: " + addResult);
+                System.out.println(addNum1 + " + " + addNum2 + " = " + addResult);
                 while (true) {
                     System.out.print("Do you want to add another number to the current result? (yes/no): ");
                     String more = input.next();
                     if (!more.equalsIgnoreCase("yes")) {
                         break;
                     }
+                    System.out.println("Current Result: " + addResult);
                     System.out.print("Enter another number: ");
                     double addNumNext = input.nextDouble();
                     addResult += addNumNext;
-                    System.out.println("Updated Result: " + addResult);
+                    System.out.println(addResult + " + " + addNumNext + " = "  + addResult);
                 }
                 exitQuestion();
                 break;
 
             case "2":
-                System.out.println("[Subtraction selected]");
+                System.out.println("[ Subtraction selected ]");
                 System.out.print("Enter first number: ");
                 double subNum1 = input.nextDouble();
                 System.out.print("Enter second number: ");
                 double subNum2 = input.nextDouble();
                 double subResult = Subtraction(subNum1, subNum2);
-                System.out.println("Result: " + subResult);
+                System.out.println(subNum1 + " - " + subNum2 + " = " + subResult);
 
                 while (true) {
                     System.out.print("Do you want to subtract another number from the current result? (yes/no): ");
@@ -85,13 +86,13 @@ public class Main {
                 break;
 
             case "3":
-                System.out.println("[Multiplication selected]");
+                System.out.println("[ Multiplication selected ]");
                 System.out.print("Enter first number: ");
                 double prodNum1 = input.nextDouble();
                 System.out.print("Enter second number: ");
                 double prodNum2 = input.nextDouble();
                 double prodResult = Multiplication(prodNum1, prodNum2);
-                System.out.println("Result: " + prodResult);
+                System.out.println(prodNum1 + " x " + prodNum2 + " = " + prodResult);
 
                 while (true) {
                     System.out.print("Do you want to multiply another number with the current result? (yes/no): ");
@@ -108,13 +109,13 @@ public class Main {
                 break;
 
             case "4":
-                System.out.println("[Division selected]");
+                System.out.println("[ Division selected ]");
                 System.out.print("Enter first number: ");
                 double divNum1 = input.nextDouble();
                 System.out.print("Enter second number: ");
                 double divNum2 = input.nextDouble();
                 double divResult = Division(divNum1, divNum2);
-                System.out.println("Result: " + divResult);
+                System.out.println(divNum1 + " / " + divNum2 + " = " + divResult);
 
                 while (true) {
                     System.out.print("Do you want to divide the current result by another number? (yes/no): ");
