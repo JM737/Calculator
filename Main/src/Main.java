@@ -125,10 +125,11 @@ public class Main {
                     if (!more.equalsIgnoreCase("yes")) {
                         break;
                     }
+                    System.out.println("Current Result: " + divResult);
                     System.out.print("Enter another number: ");
                     double divNumNext = input.nextDouble();
                     divResult = Division(divResult, divNumNext);
-                    System.out.println("Updated Result: " + divResult);
+                    System.out.println(divResult + " / " + divNumNext + " = "  + divResult);
                 }
                 exitQuestion();
                 break;
