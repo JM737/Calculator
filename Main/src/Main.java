@@ -41,14 +41,8 @@ public class Main {
         switch (switchChoice) {
             case  "1":
                 System.out.println("[ Addition selected ]");
-                    System.out.print("Enter first number: ");
-                    double addNum1 = input.nextDouble();
-                    if (input.hasNextDouble()) {
-                        input.nextDouble(); // Consume the next double if it exists
-                    } else {
-                        System.out.println("Invalid input. Please enter a valid number.");
-                        return; // Exit the method if input is invalid
-                    }
+                System.out.print("Enter first number: ");
+                double addNum1 = input.nextDouble();
                 System.out.print("Enter second number: ");
                 double addNum2 = input.nextDouble();
                 double addResult = Addition(addNum1, addNum2);
