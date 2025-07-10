@@ -117,10 +117,8 @@ public class Main {
 
             case "4":
                 System.out.println("[ Division selected ]");
-                System.out.print("Enter first number: ");
-                double divNum1 = input.nextDouble();
-                System.out.print("Enter second number: ");
-                double divNum2 = input.nextDouble();
+                double divNum1 = getValidDouble("Enter first number: ");
+                double divNum2 = getValidDouble(("Enter second number: "));
                 double divResult = Division(divNum1, divNum2);
                 System.out.println(divNum1 + " / " + divNum2 + " = " + divResult);
 
