@@ -95,10 +95,8 @@ public class Main {
 
             case "3":
                 System.out.println("[ Multiplication selected ]");
-                System.out.print("Enter first number: ");
-                double prodNum1 = input.nextDouble();
-                System.out.print("Enter second number: ");
-                double prodNum2 = input.nextDouble();
+                double prodNum1 = getValidDouble("Enter first number: ");
+                double prodNum2 = getValidDouble("Enter second number: ");
                 double prodResult = Multiplication(prodNum1, prodNum2);
                 System.out.println(prodNum1 + " x " + prodNum2 + " = " + prodResult);
 
