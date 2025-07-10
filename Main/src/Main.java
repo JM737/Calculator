@@ -34,17 +34,26 @@ public class Main {
             exit = true; // Continue the loop
         }
     }
+    static double getValidDouble(String prompt) {
+        while (true) {
+            System.out.print(prompt);
+            if (input.hasNextDouble()) {
+                return input.nextDouble();
+            } else {
+                System.out.println("Invalid input. Please enter a valid number.");
+                input.next(); // Clear invalid input
+            }
+        }
+    }
     /* SWITCH CASE FUNCTION */
     //NEED TO CATCH ALL THE INVALID INPUT//
     // NEED TO ADD A FUNCTION TO CHECK IF THE INPUT IS A NUMBER OR NOT //
     static void switchCase(String switchChoice) {
         switch (switchChoice) {
-            case  "1":
+            case "1":
                 System.out.println("[ Addition selected ]");
-                System.out.print("Enter first number: ");
-                double addNum1 = input.nextDouble();
-                System.out.print("Enter second number: ");
-                double addNum2 = input.nextDouble();
+                double addNum1 = getValidDouble("Enter first number: ");
+                double addNum2 = getValidDouble("Enter second number: ");
                 double addResult = Addition(addNum1, addNum2);
 
                 System.out.println(addNum1 + " + " + addNum2 + " = " + addResult);
@@ -55,10 +64,9 @@ public class Main {
                         break;
                     }
                     System.out.println("Current Result: " + addResult);
-                    System.out.print("Enter another number: ");
-                    double addNumNext = input.nextDouble();
+                    double addNumNext = getValidDouble("Enter another number: ");
                     addResult += addNumNext;
-                    System.out.println(addResult + " + " + addNumNext + " = "  + addResult);
+                    System.out.println("Updated Result: " + addResult);
                 }
                 exitQuestion();
                 break;
