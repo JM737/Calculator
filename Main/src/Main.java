@@ -73,10 +73,8 @@ public class Main {
 
             case "2":
                 System.out.println("[ Subtraction selected ]");
-                System.out.print("Enter first number: ");
-                double subNum1 = input.nextDouble();
-                System.out.print("Enter second number: ");
-                double subNum2 = input.nextDouble();
+                double subNum1 = getValidDouble("Enter first number: ");
+                double subNum2 = getValidDouble("Enter second number: ");
                 double subResult = Subtraction(subNum1, subNum2);
                 System.out.println(subNum1 + " - " + subNum2 + " = " + subResult);
 
